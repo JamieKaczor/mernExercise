@@ -25,7 +25,9 @@ export default function CreateStudent() {
     });
 
     const createStudent = () => {
-        axios.post('htt;://localhost:5000/students', student)
+        axios.post('htt;://localhost:5000/students', student).then( () => {
+            window.location.reload(false);
+        })
     }
     return (
         <>
